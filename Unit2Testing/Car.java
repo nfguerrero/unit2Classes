@@ -19,8 +19,10 @@ public class Car
     /**
      * Constructor for Car that specifies fuel efficiency
      */
-    public Car(double fuelEfficiency)
-    {        
+    public Car(double efficiency)
+    {
+        this.fuelEfficiency = efficiency;
+        this.fuelInTank = 0;
     }
 
     /**
@@ -31,8 +33,10 @@ public class Car
      */
     public void addGas(double gallons)
     {
+        this.fuelInTank += gallons;
     }
-
+
+
     /**
      * Reduces the fuel in this car's tank based on this car's fuel efficiency 
      *  and the specified number of miles driven
@@ -43,8 +47,11 @@ public class Car
      */
     public void drive(double miles)
     {
+        double gallonsBurned = miles / this.fuelEfficiency;
+        this.fuelInTank = this.fuelInTank - gallonsBurned;
     }
-
+
+
     /**
      * Returns the number of gallons of gas remaining in this car's tank.
      *
@@ -52,7 +59,7 @@ public class Car
      */
     public double getGasInTank()
     {
-        return 0;
+        return this.fuelInTank;
     }
 
 }

@@ -62,4 +62,17 @@ public class CarTest
         assertEquals(25.0, gallons, 1e-6);
     }
 
+    @Test
+    public void testDrive()
+    {
+        Car testCar = new Car(50);
+        testCar.addGas(20);
+        testCar.drive(25);
+        double gallons = testCar.getGasInTank();
+        assertEquals(19.5, gallons, 1e-6);
+        
+        testCar.drive(100);
+        gallons = testCar.getGasInTank();
+        assertEquals(17.5, gallons, 1e-6);
+    }
 }
