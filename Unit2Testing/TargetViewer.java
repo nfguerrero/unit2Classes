@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  * Write a description of class TargetViewer here.
@@ -12,8 +13,10 @@ public class TargetViewer
     /**
      * Default constructor for objects of class TargetViewer
      */
-    public static void main(String[] args)
+    public static void main(String[] args) throws InterruptedException
     {
+        int count = 0;
+        
         JFrame frame = new JFrame();
         
         frame.setSize(400, 400);
@@ -24,6 +27,13 @@ public class TargetViewer
         frame.add(component);
         
         frame.setVisible(true);
+        
+        while (count < 10)
+        {
+            frame.repaint();
+            Thread.sleep(1000);
+            count += 1;
+        }
     }
 
 }
