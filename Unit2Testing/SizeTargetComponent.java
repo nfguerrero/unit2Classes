@@ -19,8 +19,8 @@ public class SizeTargetComponent extends JComponent
     {
        Graphics2D g2 = (Graphics2D) g;
        
-       int x = getWidth() / 2;
-       int y = getHeight() / 2;
+       int x = getWidth();
+       int y = getHeight();
        
        SizeTarget target1 = new SizeTarget(x, y);
        

@@ -33,9 +33,9 @@ public class SizeTarget
      */
     public void draw(Graphics2D g2)
     {        
-        Ellipse2D.Double outCircle = new Ellipse2D.Double(0, 0, this.xLeft * 2, this.yTop * 2);
-        Ellipse2D.Double midCircle = new Ellipse2D.Double(50, 50, this.xLeft * 2 - 100, this.yTop * 2 - 100);
-        Ellipse2D.Double inCircle = new Ellipse2D.Double(100, 100, this.xLeft * 2 - 200, this.yTop * 2 - 200);
+        Ellipse2D.Double outCircle = new Ellipse2D.Double(0, 0, this.xLeft, this.yTop);
+        Ellipse2D.Double midCircle = new Ellipse2D.Double(50, 50, this.xLeft - 100, this.yTop - 100);
+        Ellipse2D.Double inCircle = new Ellipse2D.Double(100, 100, this.xLeft - 200, this.yTop - 200);
         
         g2.setColor(Color.RED);
         g2.draw(outCircle);
