@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TargetViewer
+public class SizeTargetViewer
 {
 
     /**
@@ -20,20 +20,14 @@ public class TargetViewer
         JFrame frame = new JFrame();
         
         frame.setSize(400, 400);
-        frame.setTitle("A moving target");
+        frame.setTitle("A resizable target");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        TargetComponent component = new TargetComponent();
+        SizeTargetComponent component = new SizeTargetComponent();
         frame.add(component);
         
         frame.setVisible(true);
-        
-        while (count < 10)
-        {
-            frame.repaint();
-            Thread.sleep(1000);
-            count += 1;
-        }
+      
     }
 
 }
