@@ -11,6 +11,8 @@ import javax.swing.JComponent;
  */
 public class CityscapeComponent extends JComponent
 {
+    private int x = getWidth()/8;
+    private int y = getHeith()/6;
     /**
      *Default constructor for objects of class CityscapeComponent
      */
@@ -18,10 +20,12 @@ public class CityscapeComponent extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         
-        Road road = new Road();
+        Road road = new Road(x*7, y);
+        Building buildLeft = new Building();
+        Building buildRight = new Building();
         
         
-        
+        road.draw(g2);       
         
     }
 
