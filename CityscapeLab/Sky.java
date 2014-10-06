@@ -34,7 +34,7 @@ public class Sky
     {
         Rectangle2D.Double sky = new Rectangle2D.Double(0, 0, this.xWidth, this.yHeight);
         
-        Color skyColor = new Color(53, 205, 252);
+        Color skyColor = new Color(25, 183, 250);
         g2.setColor(skyColor);
         g2.draw(sky);
         g2.fill(sky);
