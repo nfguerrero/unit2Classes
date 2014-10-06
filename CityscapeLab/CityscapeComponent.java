@@ -36,7 +36,9 @@ public class CityscapeComponent extends JComponent
         Road road = new Road(this.x, this.y*5, this.x*6, this.y);
         Building buildLeft = new Building(0, this.y*3, this.x, this.y*3);
         Building buildRight = new Building(this.x*7, this.y*3, this.x, this.y*3);
+        Sky sky = new Sky(getWidth(), getHeight()-this.y*4);
         
+        sky.draw(g2);
         build1.draw(g2);
         build2.draw(g2);
         build3.draw(g2);
@@ -47,7 +49,7 @@ public class CityscapeComponent extends JComponent
         build8.draw(g2);
         buildLeft.draw(g2);
         buildRight.draw(g2);
-        road.draw(g2);
+        road.draw(g2); 
         
     }
 

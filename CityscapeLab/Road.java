@@ -5,7 +5,7 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 
 /**
- * Makes a building(a rectangle)
+ * Makes a road(a rectangle)
  * 
  * @author nfguerrero 
  * @version 10/3/14
@@ -55,9 +55,10 @@ public class Road
         Rectangle2D.Double line11 = new Rectangle2D.Double(this.xLeft+sixth*5.05, this.yTop+this.yHeight*.4, sixth*.4, this.yHeight*.2);
         Rectangle2D.Double line12 = new Rectangle2D.Double(this.xLeft+sixth*5.55, this.yTop+this.yHeight*.4, sixth*.4, this.yHeight*.2);
         
-        g2.draw(road);
         g2.setColor(Color.BLACK);
+        g2.draw(road);
         g2.fill(road);
+        g2.setColor(Color.YELLOW);
         g2.draw(line1);
         g2.draw(line2);
         g2.draw(line3);
@@ -70,7 +71,6 @@ public class Road
         g2.draw(line10);
         g2.draw(line11);
         g2.draw(line12);
-        g2.setColor(Color.YELLOW);
         g2.fill(line1);
         g2.fill(line2);
         g2.fill(line3);

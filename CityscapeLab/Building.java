@@ -56,6 +56,7 @@ public class Building
         Rectangle2D.Double window9 = new Rectangle2D.Double(this.xLeft+gap*.07, this.yTop+third*2.1, gap*.4, third*.4);
         Rectangle2D.Double window10 = new Rectangle2D.Double(this.xLeft+gap*.53, this.yTop+third*2.1, gap*.4, third*.4);
         Rectangle2D.Double door = new Rectangle2D.Double(this.xLeft+gap*.37, this.yTop+third*2.6, gap*.26, third*.4);
+        Rectangle2D.Double innerDoor = new Rectangle2D.Double(this.xLeft+gap*.397, this.yTop+third*2.65, gap*.2, third*.33);
         
         g2.setColor(Color.GRAY);
         g2.draw(outline);
@@ -90,5 +91,18 @@ public class Building
         g2.setColor(doorColor);
         g2.draw(door);
         g2.fill(door);
+        g2.setColor(Color.BLACK);
+        g2.draw(door);
+        g2.draw(innerDoor);
+        g2.draw(window1);
+        g2.draw(window2);
+        g2.draw(window3);
+        g2.draw(window4);
+        g2.draw(window5);
+        g2.draw(window6);
+        g2.draw(window7);
+        g2.draw(window8);
+        g2.draw(window9);
+        g2.draw(window10);
     }
 }
