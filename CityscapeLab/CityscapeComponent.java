@@ -37,7 +37,10 @@ public class CityscapeComponent extends JComponent
         Building buildLeft = new Building(0, this.y*3, this.x, this.y*3);
         Building buildRight = new Building(this.x*7, this.y*3, this.x, this.y*3);
         Sky sky = new Sky(getWidth(), getHeight()-this.y*4);
-        Person zombie1 = new Person(400, 300, 0);
+        Person zombie1 = new Person(600, 500, 0);
+        Person zombie2 = new Person(300, 500, 0);
+        Person wimp = new Person(425, 500, 1);
+        Person marine = new Person(475, 500, 2);
          
         sky.draw(g2);
         build1.draw(g2);
@@ -52,6 +55,10 @@ public class CityscapeComponent extends JComponent
         buildRight.draw(g2);
         road.draw(g2);
         zombie1.draw(g2);
+        zombie2.turnRight();
+        zombie2.draw(g2);
+        wimp.draw(g2);
+        marine.draw(g2);
         
     }
 

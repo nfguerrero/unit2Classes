@@ -1,5 +1,6 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
+import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.awt.Color;
@@ -33,10 +34,14 @@ public class Sky
     public void draw(Graphics2D g2)
     {
         Rectangle2D.Double sky = new Rectangle2D.Double(0, 0, this.xWidth, this.yHeight);
+        Ellipse2D.Double sun = new Ellipse2D.Double(this.xWidth/15, this.yHeight/6, 75, 75);
         
         Color skyColor = new Color(25, 183, 250);
         g2.setColor(skyColor);
         g2.draw(sky);
         g2.fill(sky);
+        g2.setColor(Color.YELLOW);
+        g2.draw(sun);
+        g2.fill(sun);
     }
 }
