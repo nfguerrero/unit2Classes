@@ -5,7 +5,7 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 
 /**
- * Makes a building(a rectangle)
+ * Makes a building.
  * 
  * @author nfguerrero 
  * @version 10/3/14

@@ -5,7 +5,7 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 
 /**
- * Makes a road(a rectangle)
+ * Makes a road.
  * 
  * @author nfguerrero 
  * @version 10/3/14

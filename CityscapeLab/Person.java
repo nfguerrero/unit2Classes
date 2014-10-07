@@ -6,7 +6,7 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 
 /**
- * Write a description of class Person here.
+ * Creates a person based on its status.
  * 
  * @author nfguerrero 
  * @version 10/6/14
@@ -125,8 +125,6 @@ public class Person
        g2.fill(rightArm);
        g2.draw(rightForeArm);
        g2.fill(rightForeArm);
-       g2.draw(leftForeArm);
-       g2.fill(leftForeArm);
        g2.draw(waist);
        g2.fill(waist);
        g2.draw(leftLeg);
@@ -146,10 +144,13 @@ public class Person
        g2.setColor(gunColor);
        g2.draw(gunBarrel);
        g2.fill(gunBarrel);
+       g2.setColor(skinColor);
+       g2.draw(leftForeArm);
+       g2.fill(leftForeArm);
     }
     
     /**
-     * Turns the person right(only works on Zombie...
+     * Turns the person right(only works on Zombie...)
      */
     public void turnRight()
     {
